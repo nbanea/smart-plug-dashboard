@@ -1,0 +1,29 @@
+CREATE TABLE plugs (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  plug_name TEXT,
+  addedAt TIMESTAMP DEFAULT (datetime('now', 'localtime'))
+);
+
+CREATE TABLE plug_power (
+  plug_name TEXT,
+  plug_power FLOAT,
+  loggedAt TIMESTAMP DEFAULT (datetime('now', 'localtime'))
+);
+
+CREATE TABLE plug_consumption (
+  plug_name TEXT,
+  plug_consumption FLOAT,
+  loggedAt TIMESTAMP DEFAULT (datetime('now', 'localtime'))
+);
+
+CREATE TABLE plug_temperature (
+  plug_name TEXT,
+  plug_temperature FLOAT,
+  loggedAt TIMESTAMP DEFAULT (datetime('now', 'localtime'))
+);
+
+CREATE TABLE plug_status (
+  plug_name TEXT,
+  plug_status TEXT,
+  loggedAt TIMESTAMP DEFAULT (datetime('now', 'localtime'))
+);
